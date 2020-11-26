@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>modal</ion-title>
+      <ion-icon button (click)="exitOnData()" slot="end" name="circle-close" class="ion-margin"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>Select to Model</ion-label>
+    </ion-item-divider>
+
+    <ion-item mode="md">
+      <ion-label position="floating">Model</ion-label>
+      <ion-icon slot="start" name="albums"></ion-icon>
+      <ion-select  [(ngModel)]="selectMarcVal" autocapitalize (ion-change)="$event" interface="action-sheet">
+        <ion-select-option *ngFor="let item of listModels" [value]="item">{{item}}</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Select date</ion-label>
+      <ion-datetime displayFormat="YYYY" min="1940"  [ngModel]="dateValue.toISOString()"></ion-datetime>
+    </ion-item>
+
+    <ion-item-divider mode="md">
+      <ion-label class="ion-text-center">indicate to what autopart belongs</ion-label>
+    </ion-item-divider>
+
+    
+    <div>
+      <ion-button (click)="addComponent()" expand="block" fill="clear" shape="round">
+        <span>Add Components</span>
+        <ion-icon name="add" slot="end"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-item-group>
+</ion-content>
