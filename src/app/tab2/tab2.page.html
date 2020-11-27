@@ -18,25 +18,31 @@
       <ion-item class="ion-text-center" lines="full" >
         <ion-input type="text" maxlength="17" placeholder="Insert code here"></ion-input>
       </ion-item>
-      <br>
+      
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="6">
+            <ion-button fill="outline" class="ion-margin" (click)="scanner()" size="small" expand="block">
+              <ion-label>Scan</ion-label>
+              <ion-icon slot="start" name="scan"></ion-icon>
+            </ion-button>
+          </ion-col>
+          <ion-col size="6">
+            <ion-button (click)="manual()" expand="block" size="small" fill="outline" class="ion-margin">
+              <ion-label>Manual</ion-label>
+              <ion-icon slot="start" name="layers"></ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
       <div class="ion-text-center">
         <ion-button fill="outline" expand="block ">
           <ion-label>Search</ion-label>
           <ion-icon slot="start" name="search"></ion-icon>
         </ion-button>
       </div>
-      <div class="ion-text-center">
-        <ion-button fill="outline" class="ion-margin" (click)="scanner()" size="small" expand="block">
-          <ion-label>Scan</ion-label>
-          <ion-icon slot="start" name="scan"></ion-icon>
-        </ion-button>
-      </div>
-      <div>
-        <ion-button (click)="manual()" expand="block" size="small" fill="outline" class="ion-margin">
-          <ion-label>Manual</ion-label>
-          <ion-icon slot="start" name="layers"></ion-icon>
-        </ion-button>
-      </div>
+
+
     </ion-card-content>
   </ion-card>
 

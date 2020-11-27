@@ -7,5 +7,30 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col>
+        <ion-card button (click)="openModalData()">
+          <ion-card-header>
+            <ion-card-subtitle>#Vin code#</ion-card-subtitle>
+            <ion-card-title>Fiesta</ion-card-title>
+          </ion-card-header>
+          <ion-card-content class="ion-no-padding">
+            <div class="cardImageContainer">
+              <img class="cardImage" src="https://m.media-amazon.com/images/I/61Wp7BlukWL._UY560_.jpg">
+            </div>
+            <div class="cardFooter i-margin">
+              <div class="boxdate">
+                <ion-icon class="b" name="calendar-outline"></ion-icon>
+                <span class="b">DD/MM/YYYY</span>
+              </div>
+              <div class="boxprice">
+                <ion-label>0.00$</ion-label>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
